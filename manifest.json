@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "Auto Tab Rotator",
+  "version": "1.0.0",
+  "description": "Automatically cycles through open tabs with main-tab control, periodic revisits, and auto-stop on manual focus.",
+  "permissions": [
+    "tabs",
+    "storage",
+    "alarms"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Auto Tab Rotator",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}

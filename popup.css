@@ -12,11 +12,18 @@ body {
   width: 300px;
   -webkit-font-smoothing: antialiased;
   user-select: none;
-  overflow: hidden;
 }
 
 /* ── Container ── */
 .container {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* ── Inner body content (below header) ── */
+.body-content {
+  padding: 14px 16px 14px;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -83,10 +90,6 @@ body {
 
 /* Paused state stays default */
 
-/* ── Body padding wrapper ── */
-.container > *:not(.header-row) { padding: 0 16px; }
-.container > *:first-child { padding: 0; } /* header has its own padding */
-
 /* ── Main Tab Info Pill ── */
 .main-tab-info {
   display: flex;
@@ -97,7 +100,6 @@ body {
   border-radius: 6px;
   padding: 8px 10px;
   min-height: 36px;
-  margin: 14px 16px 0;
 }
 
 .main-tab-label {
@@ -131,7 +133,6 @@ body {
   font-size: 11px;
   font-weight: 500;
   line-height: 1.35;
-  margin: 8px 16px 0;
 }
 
 .lock-icon { flex-shrink: 0; color: #c9956a; }
@@ -143,7 +144,6 @@ body {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  padding: 14px 16px 0;
   transition: opacity 0.2s;
 }
 
@@ -256,7 +256,6 @@ body {
 
 /* ── Footer Note ── */
 .footer-note {
-  padding: 10px 16px 14px;
   text-align: center;
   font-size: 10.5px;
   color: #4a5054;
